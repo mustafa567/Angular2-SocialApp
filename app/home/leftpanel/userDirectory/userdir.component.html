@@ -1,0 +1,18 @@
+<div class="user-dir">
+    <div class="user-dir-header">
+        <span>Users</span>
+        <div class="add-btn">
+            <i class="fa fa-plus-circle" aria-hidden="true"></i>
+        </div>
+    </div>
+
+    <div *ngFor="let user of users" style="padding: 0px 5px 0px 8px;">
+        <div class="list-users">
+           <i class="fa fa-user-circle" aria-hidden="true"></i>
+        </div>
+        {{user.username}} ({{user.firstName}} {{user.lastName}})
+        <a (click)="deleteUser(user.id)" class="delete-btn">   
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </a>
+    </div>
+</div>

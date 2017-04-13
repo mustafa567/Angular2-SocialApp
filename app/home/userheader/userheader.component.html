@@ -1,0 +1,49 @@
+<nav class="navbar  fixed-nav-bar navbar-fixed-top">
+    <div class="col-md-3">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a [routerLink]="['']"><img    style="width: 48px;height: 48px;float: left;margin-right: 10px;"src="http://www.freeiconspng.com/uploads/google-chrome-icon-blue-black-33.png"></a>
+<a class="navbar-brand" [routerLink]="['']">Soical</a>
+</div>
+</div>
+
+</div>
+
+
+<div class="col-md-6">
+    <div id="custom-search-input">
+        <div class="input-group col-md-12">
+            <input type="text" class="form-control input-lg" placeholder="Search User, Groups or Feed" />
+            <span class="input-group-btn">
+                        <button class="btn btn-info btn-lg" type="button">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </span>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-3">
+    <ul class="nav navbar-nav navbar-right">
+        <div class="user-profile" (click)="showhideUserMenu()">
+            <a>
+                <div class="user-name">
+                    <span>{{currentUser.firstName}}</span>
+                </div>
+
+                <div class="user-avatar">
+                    <img src="./img/defaultprofile.png">
+                </div>
+            </a>
+        </div>
+
+        <div class="user-menu" [hidden]="!usermenu">
+            <span>Settings</span>
+            <hr class="hr-or">
+            <p><a [routerLink]="['/login']">Logout</a></p>
+        </div>
+    </ul>
+</div>
+
+</nav>
